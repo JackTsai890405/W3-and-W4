@@ -361,3 +361,310 @@ a {
     }
   }
 }
+
+.productSun_head {
+  @include max_width(1120px);
+  @include margin_0_auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  .category {
+    white-space: nowrap;
+    @include display_flex;
+    @include align_items_center;
+    @include justify_content_center;
+    li {
+      border-left: 1px solid #DCDCDC;
+      border-right: 1px solid #DCDCDC;
+      padding-top: 27px;
+      padding-bottom: 26px;
+      @include font_size_and_line_height(32px, 1.5);
+      @include iPad {
+        @include font_size_and_line_height(24px, 1.3);
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+      @include mobile {
+        @include font_size_and_line_height(14px, 1);
+        padding-top: 6px;
+        padding-bottom: 5px;
+      }
+    }
+    .item1 {
+      padding-left: 94px;
+      padding-right: 92px;
+      img {
+        width: 32px;
+        height: 32px;
+        margin-right: 22px;
+      }
+      @include iPad {
+        padding-left: 47px;
+        padding-right: 46px;
+        img {
+          width: 21px;
+          height: 21px;
+          margin-right: 17px;
+        }
+      }
+      @include mobile {
+        padding-left: 20px;
+        padding-right: 19px;
+        img {
+          width: 10px;
+          height: 10px;
+          margin-right: 6px;
+        }
+      }
+    }
+    .item2 {
+      padding-left: 59px;
+      padding-right: 57px;
+      border-bottom: 8px solid #AA0601;
+      img {
+        width: 44px;
+        height: 44px;
+        margin-right: 10px;
+      }
+      @include iPad {
+        padding-left: 21px;
+        padding-right: 20px;
+        img {
+          width: 29px;
+          height: 29px;
+          margin-right: 9px;
+        }
+      }
+      @include mobile {
+        padding-left: 4px;
+        padding-right: 5px;
+        img {
+          width: 14px;
+          height: 14px;
+          margin-right: 2px;
+        }
+      }
+    }
+    .item3 {
+      padding-left: 74px;
+      padding-right: 60px;
+      img {
+        width: 20px;
+        height: 40px;
+        margin-right: 22px;
+      }
+      @include iPad {
+        padding-left: 31px;
+        padding-right: 22px;
+        img {
+          width: 32px;
+          height: 32px;
+          margin-right: 17px;
+        }
+      }
+      @include mobile {
+        padding-left: 10px;
+        padding-right: 7px;
+        img {
+          width: 6px;
+          height: 13px;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+  
+  
+}
+
+.bannerImage{
+  @include display_flex;
+  margin-bottom: 80px;
+  @include iPad {
+    margin-bottom: 56px;
+  }
+  @include mobile {
+    margin-bottom: 32px;
+  }
+  .bannerImage1 {
+    width: 960px;
+    height: 304px;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner-3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 50%;
+    @include iPad {
+      // width: 384px;
+      // height: 304px;
+    }
+    @include mobile {
+      // width: 187.5px;
+      // height: 148px;
+    }
+  }
+  .bannerImage2 {
+    width: 960px;
+    height: 304px;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/product-2-color.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 50%;
+    @include iPad {
+      // width: 384px;
+      // height: 304px;
+    }
+    @include mobile {
+      // width: 187.5px;
+      // height: 148px;
+    }
+  }
+}
+
+.productSun_bottom {
+  @include max_width(1120px);
+  @include margin_0_auto;
+  padding-bottom: 160px;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include iPad{
+    padding-bottom: 96px;
+  }
+  @include mobile{
+    padding-bottom: 0;
+  }
+  .title{
+    @include text_align_center;
+    @include font_size_and_line_height(42px, 1.5);
+    font-weight: bold;
+    @include iPad{
+      @include font_size_and_line_height(32px, 1.5);
+    }
+    @include mobile{
+      @include font_size_and_line_height(20px, 1.5);
+    }
+  }
+  .subTitle{
+    @include text_align_center;
+    font-weight: bold;
+    @include font_size_and_line_height(32px, 1.5);
+    margin-bottom: 40px;
+    @include iPad{
+      @include font_size_and_line_height(24px, 1.5);
+      margin-bottom: 32px;
+    }
+    @include mobile{
+      @include font_size_and_line_height(16px, 1.5);
+      margin-bottom: 20px;
+    }
+  }
+  .product{
+    @include display_flex;
+    @include flex_wrap_wrap;
+    @include font_size_and_line_height(24px, 1.5);
+    @include mobile {
+      @include font_size_and_line_height(16px, 1.5);
+    }
+    li {
+      @include display_flex;
+      @include flex_direction_column;
+      &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        margin-bottom: 104px;
+      }
+      width: 31%;
+      &:nth-child(1), &:nth-child(2), &:nth-child(4), &:nth-child(5){
+        margin-right: 3.5%;
+      }
+      @include iPad {
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4){
+          margin-bottom: 72px;
+        }
+        width: 48%;
+        &:nth-child(1), &:nth-child(3), &:nth-child(5){
+          margin-right: 4%;
+        }
+        &:nth-child(2), &:nth-child(4), &:nth-child(6){
+          margin-right: 0%;
+        }
+      }
+      @include mobile {
+        margin-right: 0;
+        width: 100%;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5){
+          margin-bottom: 32px;
+        }
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6){
+          margin-right: 0%;
+        }
+      }
+
+      .productText{
+        @include display_flex;
+        @include justify_content_space_between;
+        .productName{
+          font-weight: bold;
+        }
+        .productPrice{
+          font-weight: bold;
+          color: #AA0601;
+        }
+      }
+      .productColor{
+        @include display_flex;
+        .productColor1{
+          width: 24px;
+          height: 24px;
+          background-color: #5F3E2D;
+          margin-right: 8px;
+          @include mobile {
+            width: 15px;
+            height: 16px;
+            background-color: #5F3E2D;
+            margin-right: 4px;
+          }
+        }
+        .productColor2{
+          width: 24px;
+          height: 24px;
+          background-color: #B75929;
+          @include mobile {
+            width: 15px;
+            height: 16px;
+            background-color: #B75929;
+            margin-right: 4px;
+          }
+        }          
+      }    
+    }
+  }
+  .page {
+    display: none;
+    
+    @include mobile {
+      margin-top: 40px;
+      margin-bottom: 56px;
+      display: block;
+      
+      @include display_flex;
+      @include justify_content_center;
+      li {
+        border: 1px solid #555555;
+        
+        a {
+          display: block;
+          color: #555555;
+          padding: 12px 15px;
+        }
+        &:nth-child(3) {
+          background-color: #000000;
+          a {
+            color: #FFF;
+          }
+        }
+        &:nth-child(7) {
+          background-color: #F2F2F2;
+        }
+      }
+    }
+  }
+}

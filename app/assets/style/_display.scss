@@ -44,6 +44,9 @@
 @mixin justify_content_space_between() {
     justify-content: space-between;
 }
+@mixin justify_content_space_around() {
+    justify-content: space-around;
+}
 
 @mixin align_items_center() {
     align-items: center;

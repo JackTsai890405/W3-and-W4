@@ -18,148 +18,174 @@ a {
 }
 
 .header {
+  @include text_align_center;
   padding: 30px 88px;
-  background-color: #AA0601;
-  @include display_flex();
-  @include justify_content_space_between();
-  @include align_items_center();
-  @include mobile {
-    @include flex_direction_column();
-    padding: 10px 0px 0px 0px;
+  @include iPad {
+    padding: 30 39px;
   }
+  @include mobile {
+    padding: 10px 0 0 0;
+  }
+  background-color: #AA0601;
+  color: #FFF;
+  @include display_flex;
+  @include mobile {
+    @include flex_direction_column;
+  }
+  @include justify_content_space_between;
+  @include align_items_center;
   .headerLogo {
     @include mobile {
       margin-bottom: 10px;
     }
   }
   .headerNav {
-    @include display_flex();
-    @include flex_wrap_wrap();
+    @include display_flex;
+    @include flex_wrap_wrap;
     @include mobile {
       width: 100%;
     }
     .item {
-      margin-left: 64px;
-      &:first-child {
-        margin-left: 0;
+      margin-right: 64px;
+      &:last-child {
+        margin-right: 0;
       }
       @include iPad {
-        margin-left: 40px;
-        &:first-child {
-          margin-left: 0;
-        }
+        margin-right: 40px;
       }
       @include mobile {
-        margin-left: 0px;
         width: 50%;
+        margin-right: 0;
         border: 1px solid #FFF;
-        padding: 8px 54px;
-        white-space: nowrap;
-        @include text_align_center();
-        
       }
     }
   }
 }
 
 .footer {
+  // @include iPad {}
+  // @include mobile {}
   background-color: #AA0601;
-  color: #FFFFFF;
-  @include iPad {
-    padding: 20px;
-  }
+  color: #FFF;
   .container {
     @include max_width(1120px);
-    @include margin_0_auto();
-    @include font_size_and_line_height(16px, 1.5);
-    padding-top: 35px;
-    padding-bottom: 35px;
+    @include margin_0_auto;
+    padding: 30px 15px;
     .info {
-      border-bottom: 1px solid #FFFFFF;
-      @include display_flex();
-      @include justify_content_space_between();
-      .map {
-        @include display_flex();
-        @include justify_content_space_between();
-        margin-bottom: 42px;
-        .item {
-          margin-right: 40px;
+      @include display_flex;
+      @include justify_content_space_between;
+      border-bottom: 1px solid #FFF;
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+      @include iPad {
+        padding-bottom: 20px;
+        margin-bottom: 24px;
+      }
+      @include mobile {
+        padding-bottom: 24px;
+        margin-bottom: 16px;
+      }
+      div {
+        .map {
+          @include display_flex;
+          margin-bottom: 36px;
+          @include iPad {
+            margin-bottom: 18px;
+          }
+          @include mobile {
+            display: none;
+          }
+          .item {
+            @include font_size_and_line_height(16px, 1.5);
+            margin-right: 48px;
+            &:last-child {
+              margin-right: 0;
+            }
+            @include iPad {
+              margin-right: 40px;
+            }     
+          }
+        }
+        .contact {
+          li {
+            @include font_size_and_line_height(36px, 1.5);
+            @include iPad {
+              @include font_size_and_line_height(20px, 1.5);
+            }
+            @include mobile {
+              @include font_size_and_line_height(16px, 1.5);
+            }
+            a {
+              margin-left: 22px;
+              @include iPad {
+                margin-left: 11px;
+              }
+              @include mobile {
+                margin-left: 4px;
+              }
+            }
+          }
+          .li1 {
+            margin-bottom: 16px;
+            @include iPad {
+              margin-bottom: 12px;
+            }
+            @include mobile {
+              margin-bottom: 4px;
+            }           
+          }
+        }
+      }
+      .social {
+        @include display_flex;
+        li {
+          margin-right: 32px;
           &:last-child {
             margin-right: 0;
           }
-        }
-      }
-      .contact {
-        @include font_size_and_line_height(36px, 1.5);
-        @include iPad {
-          @include font_size_and_line_height(20px, 1.5);
-        }
-        li {
-          @include display_flex();
-          margin-bottom: 30px;
-          img {
-            margin-right: 22px;
+          @include iPad {
+            margin-right: 24px;
           }
-          .li1 {
-            margin-bottom: 30px;
-          }
-          .li2 {
-            margin-bottom: 24px;
-          }
-        }        
-      }
-      .social {
-        @include display_flex();
-        .li1 {
-          margin-right: 32px;
-        }
-        .li2 {
-          margin-right: 32px;
         }
       }
     }
     .copyright {
-      margin-top: 32px;
-      @include display_flex();
-      @include justify_content_space_between();
-      .item {
-        @include display_flex();
-        .item1 {
-          margin-right: 48px;
-        }
+      @include display_flex;
+      @include justify_content_space_between;
+      @include mobile {
+        @include flex_direction_column;
       }
-    }
-  }
-}
-// footer 的 media query
-@media(max-width: 767px){
-  .footer {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    .container {
-      .info {
-        div {
-          .map {
-            display: none;
-          }
-        }
-      }
-
-      .copyright {
-        @include flex_direction_column();
-        p {
+      p {
+        @include font_size_and_line_height(16px, 1.5);
+        @include mobile {
+          @include font_size_and_line_height(14px, 1.5);
           margin-bottom: 8px;
         }
-        .item {
-          @include flex_direction_column();
-          .item1 {
+      }
+      .item {
+        @include display_flex;
+        @include mobile {
+          @include flex_direction_column;
+        }
+        li {
+          @include font_size_and_line_height(14px, 1.5);
+          margin-right: 48px;
+          &:last-child {
+            margin-right: 0;
+          }
+          @include iPad {
+            margin-right: 24px;
+          }
+          @include mobile {
+            margin-right: 0;
             margin-bottom: 8px;
+            &:last-child {
+              margin-bottom: 0;
+            }
           }
         }
       }
     }
-    
-    
   }
 }
 

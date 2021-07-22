@@ -668,3 +668,218 @@ a {
     }
   }
 }
+// Blog
+.container {
+  @include max_width(1120px);
+  @include margin_0_auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include iPad {
+    @include max_width(992px);
+  }
+  @include mobile {
+    @include max_width(767px);
+  }
+}
+.blogHeader {
+  @include font_size_and_line_height(20px, 1.2);
+  background-color: #650300;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  @include iPad {
+    @include font_size_and_line_height(16px, 1.5);
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  @include mobile {
+    display: none;
+  }
+  .container {
+    @include display_flex;
+    @include justify_content_space_between;
+    ul {
+      @include display_flex;
+      li {
+        a {
+          text-decoration: none;
+          color: #FFF;
+          &:nth-child(1) { 
+            padding-right: 24px;
+          }
+          &:nth-child(2), &:nth-child(3) {
+            padding-right: 24px;
+            padding-left: 24px;
+          }
+          &:nth-child(4) {
+            padding-left: 24px;
+          }
+          @include iPad {
+            &:nth-child(1) {
+              padding-right: 16px;
+            }
+            &:nth-child(2), &:nth-child(3) {
+              padding-right: 16px;
+              padding-left: 16px;
+            }
+            &:nth-child(4) {
+              padding-left: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.blogTitle {
+  border-left: 8px solid #9F1213;
+  padding-left: 16px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  @include font_size_and_line_height(48px, 1.5);
+  font-weight: bold;
+  @include iPad {
+    border-left: 4px solid #9F1213;
+    margin-top: 32px;
+    margin-bottom: 40px;
+  }
+  @include mobile{
+    padding-left: 8px;
+    @include font_size_and_line_height(28px, 1.5);
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+}
+.blog {
+  .blogList {
+    margin-bottom: 60px;
+    @include iPad {
+      margin-bottom: 24px;
+    }
+    @include mobile {
+      margin-bottom: 20px;
+    }
+    @include display_flex;
+    @include mobile {
+      @include flex_direction_column;
+      @include align_items_center;
+    }
+    img {
+      display: block;
+      width: 48.5%;
+      margin-right: 3%;
+      @include mobile {
+        width: 100%;
+        margin-right: 0%;
+        margin-bottom: 8px;
+      }
+    }
+    
+    div {
+      width: 48.5%;
+      @include mobile {
+        width: 100%;
+        margin-right: 0%;
+      }
+      .subTitle{
+        @include font_size_and_line_height(32px, 1.5);
+        color: #650300;
+        font-weight: bold;
+        margin-bottom: 2px;
+        @include iPad {
+          @include font_size_and_line_height(20px, 1.5);
+        }
+        @include mobile {
+          @include font_size_and_line_height(16px, 1.5);
+        }
+      }
+ 
+        .thirdTitle{
+          @include display_flex;
+          @include align_items_center;
+          @include justify_content_space_between
+          margin-bottom: 24px;
+          @include font_size_and_line_height(20px, 1.5);
+          font-weight: bold;
+          @include iPad {
+            margin-bottom: 32px;
+            @include font_size_and_line_height(16px, 1.5);
+          }
+          @include mobile {
+            margin-bottom: 0px;
+            @include font_size_and_line_height(14px, 1.5);
+          }
+          span {
+            @include font_size_and_line_height(16px, 1.5);
+            @include mobile {
+              @include font_size_and_line_height(14px, 1.5);
+            }
+          }
+        }
+      
+      .blogText{
+        @include font_size_and_line_height(20px, 1.5);
+        margin-bottom: 14px;
+        @include iPad {
+          margin-bottom: 0;
+        }
+        @include mobile {
+          @include font_size_and_line_height(14px, 1.5);
+          display: none;
+        }
+        .InnerTextMore {
+          display: none;
+          color: #555555;
+          @include iPad {
+            display: inline;
+          }
+        }
+      }
+      .more {
+        @include font_size_and_line_height(36px, 1.5);
+          color: #650300;
+          display: flex;
+          justify-content: flex-end;
+        @include iPad {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.blogPage {
+  white-space: nowrap;
+  @include display_flex;
+  @include justify_content_center;
+  margin-top: 36px;
+  margin-bottom: 160px;
+  @include font_size_and_line_height(18px, 1.5);
+  @include iPad {
+    margin-top: 40px;
+    margin-bottom: 96px;
+  }
+  @include mobile {
+    margin-top: 20px;
+    margin-bottom: 56px;
+    @include font_size_and_line_height(16px, 1.5);
+  }
+  li {
+    border: 1px solid #555555;
+    &:nth-child(3) {
+      background-color: #555555;
+      a {
+        color: #FFF;
+      }
+    }
+
+    a {
+      display: block;
+      color: #555555;
+      padding: 12px 16px;
+      &:nth-child(1), &:nth-child(7) {
+        padding: 11px 12px;
+      }
+
+    }
+  }
+}

@@ -751,6 +751,8 @@ a {
   }
 }
 .blog {
+  @include display_flex;
+  @include flex_direction_column;
   .blogList {
     margin-bottom: 60px;
     @include iPad {
@@ -797,7 +799,7 @@ a {
         .thirdTitle{
           @include display_flex;
           @include align_items_center;
-          @include justify_content_space_between
+          @include justify_content_space_between;
           margin-bottom: 24px;
           @include font_size_and_line_height(20px, 1.5);
           font-weight: bold;
@@ -875,11 +877,10 @@ a {
     a {
       display: block;
       color: #555555;
-      padding: 12px 16px;
+      padding: 9px 12px;
       &:nth-child(1), &:nth-child(7) {
-        padding: 11px 12px;
+        padding: 8px 10px;
       }
-
     }
   }
 }

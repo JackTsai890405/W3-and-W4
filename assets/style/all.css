@@ -708,21 +708,24 @@ a {
       margin-bottom: 40px; }
       .contact .container .check input {
         margin-right: 4px; }
-    .contact .container a {
+    .contact .container .button a {
       display: block;
-      width: 30%;
-      padding: 16px 100px;
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 16px 134px;
       margin-left: auto;
       margin-right: auto;
       background-color: #aa0601;
       color: #fff;
       text-align: center; }
       @media (max-width: 992px) {
-        .contact .container a {
-          width: 18%; } }
+        .contact .container .button a {
+          font-size: 14px;
+          line-height: 1.5;
+          padding: 10px 77px; } }
       @media (max-width: 767px) {
-        .contact .container a {
-          width: 14%; } }
+        .contact .container .button a {
+          padding: 8px 54.5px; } }
 
 .faq {
   max-width: 1150px;

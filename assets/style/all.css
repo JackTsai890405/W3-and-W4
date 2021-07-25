@@ -711,8 +711,7 @@ a {
     .contact .container a {
       display: block;
       width: 30%;
-      padding: 16px 143px;
-      white-space: nowrap;
+      padding: 16px 100px;
       margin-left: auto;
       margin-right: auto;
       background-color: #aa0601;
@@ -850,9 +849,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
     @media (max-width: 992px) {
       .location2 .position {
         -ms-flex-wrap: wrap;
@@ -892,7 +891,6 @@ a {
           margin-right: 0px; } }
       @media (max-width: 992px) {
         .location2 .position .image_and_text .text {
-          margin-top: 5px;
           width: 48%; } }
       @media (max-width: 767px) {
         .location2 .position .image_and_text .text {
@@ -934,8 +932,7 @@ a {
                 font-size: 14px;
                 line-height: 1.5; } }
     .location2 .position .map {
-      width: 57%;
-      height: 422px; }
+      width: 57%; }
       @media (max-width: 992px) {
         .location2 .position .map {
           width: 100%;

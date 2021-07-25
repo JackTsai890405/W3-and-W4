@@ -977,15 +977,13 @@ a {
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+            align-items: center; }
     .productSun_head .category li {
       border-left: 1px solid #dcdcdc;
       border-right: 1px solid #dcdcdc;
       padding-top: 27px;
-      padding-bottom: 26px; }
+      padding-bottom: 26px;
+      width: 33.33%; }
       @media (max-width: 992px) {
         .productSun_head .category li {
           padding-top: 14px;
@@ -994,76 +992,60 @@ a {
         .productSun_head .category li {
           padding-top: 6px;
           padding-bottom: 5px; } }
-    .productSun_head .category .item1 {
-      padding-left: 92px;
-      padding-right: 92px; }
+      .productSun_head .category li a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+    .productSun_head .category .item1 img {
+      width: 32px;
+      height: 32px;
+      margin-right: 22px; }
+    @media (max-width: 992px) {
       .productSun_head .category .item1 img {
-        width: 32px;
-        height: 32px;
-        margin-right: 22px; }
-      @media (max-width: 992px) {
-        .productSun_head .category .item1 {
-          padding-left: 46px;
-          padding-right: 46px; }
-          .productSun_head .category .item1 img {
-            width: 21px;
-            height: 21px;
-            margin-right: 17px; } }
-      @media (max-width: 767px) {
-        .productSun_head .category .item1 {
-          padding-left: 19px;
-          padding-right: 19px; }
-          .productSun_head .category .item1 img {
-            width: 10px;
-            height: 10px;
-            margin-right: 2px; } }
+        width: 21px;
+        height: 21px;
+        margin-right: 17px; } }
+    @media (max-width: 767px) {
+      .productSun_head .category .item1 img {
+        width: 10px;
+        height: 10px;
+        margin-right: 2px; } }
     .productSun_head .category .item2 {
-      padding-left: 57px;
-      padding-right: 57px;
       border-bottom: 8px solid #aa0601; }
       .productSun_head .category .item2 img {
         width: 44px;
         height: 44px;
         margin-right: 10px; }
       @media (max-width: 992px) {
-        .productSun_head .category .item2 {
-          padding-left: 20px;
-          padding-right: 20px; }
-          .productSun_head .category .item2 img {
-            width: 29px;
-            height: 29px;
-            margin-right: 9px; } }
+        .productSun_head .category .item2 img {
+          width: 29px;
+          height: 29px;
+          margin-right: 9px; } }
       @media (max-width: 767px) {
-        .productSun_head .category .item2 {
-          padding-left: 5px;
-          padding-right: 5px; }
-          .productSun_head .category .item2 img {
-            width: 14px;
-            height: 14px;
-            margin-right: 2px; } }
-    .productSun_head .category .item3 {
-      padding-left: 60px;
-      padding-right: 60px; }
+        .productSun_head .category .item2 img {
+          width: 14px;
+          height: 14px;
+          margin-right: 2px; } }
+    .productSun_head .category .item3 img {
+      width: 20px;
+      height: 40px;
+      margin-right: 22px; }
+    @media (max-width: 992px) {
       .productSun_head .category .item3 img {
-        width: 20px;
-        height: 40px;
-        margin-right: 22px; }
-      @media (max-width: 992px) {
-        .productSun_head .category .item3 {
-          padding-left: 22px;
-          padding-right: 22px; }
-          .productSun_head .category .item3 img {
-            width: 32px;
-            height: 32px;
-            margin-right: 17px; } }
-      @media (max-width: 767px) {
-        .productSun_head .category .item3 {
-          padding-left: 7px;
-          padding-right: 7px; }
-          .productSun_head .category .item3 img {
-            width: 6px;
-            height: 13px;
-            margin-right: 2px; } }
+        width: 32px;
+        height: 32px;
+        margin-right: 17px; } }
+    @media (max-width: 767px) {
+      .productSun_head .category .item3 img {
+        width: 6px;
+        height: 13px;
+        margin-right: 2px; } }
 
 .bannerImage {
   display: -webkit-box;

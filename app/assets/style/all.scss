@@ -545,6 +545,7 @@ a {
     @include flex_wrap_wrap;
     li {
       width: 23%;
+      height: 460px;
       margin-bottom: 16px;
       @include iPad {
         width: 49%;
@@ -563,19 +564,18 @@ a {
       }
       img {
         width: 100%;
-        height: 256px;
+        height: 56%;
       }
       .enclose {
         border: 1px solid #dee2e6;
         padding: 16px;
+        height: 44%;
+        @include font_size_and_line_height(16px, 1.5);
+        @include display_flex;
+        @include flex_direction_column;
+        @include justify_content_space_between;
         .name {
           margin-bottom: 8px;
-        }
-        .text {
-          margin-bottom: 52px;
-          @include mobile {
-            margin-bottom: 76px;
-          }
         }
       }
     }

@@ -865,12 +865,12 @@ a {
     white-space: nowrap;
     @include display_flex;
     @include align_items_center;
-    @include justify_content_center;
     li {
       border-left: 1px solid #dcdcdc;
       border-right: 1px solid #dcdcdc;
       padding-top: 27px;
       padding-bottom: 26px;
+      width: 33.33%;
       @include iPad {
         padding-top: 14px;
         padding-bottom: 14px;
@@ -879,18 +879,19 @@ a {
         padding-top: 6px;
         padding-bottom: 5px;
       }
+      a {
+        @include display_flex;
+        @include justify_content_center;
+        @include align_items_center;
+      }
     }
     .item1 {
-      padding-left: 92px;
-      padding-right: 92px;
       img {
         width: 32px;
         height: 32px;
         margin-right: 22px;
       }
       @include iPad {
-        padding-left: 46px;
-        padding-right: 46px;
         img {
           width: 21px;
           height: 21px;
@@ -898,8 +899,6 @@ a {
         }
       }
       @include mobile {
-        padding-left: 19px;
-        padding-right: 19px;
         img {
           width: 10px;
           height: 10px;
@@ -908,8 +907,6 @@ a {
       }
     }
     .item2 {
-      padding-left: 57px;
-      padding-right: 57px;
       border-bottom: 8px solid #aa0601;
       img {
         width: 44px;
@@ -917,8 +914,6 @@ a {
         margin-right: 10px;
       }
       @include iPad {
-        padding-left: 20px;
-        padding-right: 20px;
         img {
           width: 29px;
           height: 29px;
@@ -926,8 +921,6 @@ a {
         }
       }
       @include mobile {
-        padding-left: 5px;
-        padding-right: 5px;
         img {
           width: 14px;
           height: 14px;
@@ -936,16 +929,12 @@ a {
       }
     }
     .item3 {
-      padding-left: 60px;
-      padding-right: 60px;
       img {
         width: 20px;
         height: 40px;
         margin-right: 22px;
       }
       @include iPad {
-        padding-left: 22px;
-        padding-right: 22px;
         img {
           width: 32px;
           height: 32px;
@@ -953,8 +942,6 @@ a {
         }
       }
       @include mobile {
-        padding-left: 7px;
-        padding-right: 7px;
         img {
           width: 6px;
           height: 13px;

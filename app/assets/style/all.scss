@@ -621,19 +621,22 @@ a {
         margin-right: 4px;
       }
     }
-    a {
-      display: block;
-      width: 30%;
-      padding: 16px 100px;
-      @include margin_0_auto;
-      background-color: #aa0601;
-      color: #fff;
-      @include text_align_center();
-      @include iPad {
-        width: 18%;
-      }
-      @include mobile {
-        width: 14%;
+    .button {
+      a {
+        display: block;
+        @include font_size_and_line_height(16px, 1.5);
+        padding: 16px 134px;
+        @include margin_0_auto;
+        background-color: #aa0601;
+        color: #fff;
+        @include text_align_center();
+        @include iPad {
+          @include font_size_and_line_height(14px, 1.5);
+          padding: 10px 77px;
+        }
+        @include mobile {
+          padding: 8px 54.5px;
+        }
       }
     }
   }

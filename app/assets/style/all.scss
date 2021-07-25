@@ -545,7 +545,6 @@ a {
     @include flex_wrap_wrap;
     li {
       width: 23%;
-
       margin-bottom: 16px;
       @include iPad {
         width: 49%;
@@ -625,8 +624,7 @@ a {
     a {
       display: block;
       width: 30%;
-      padding: 16px 143px;
-      white-space: nowrap;
+      padding: 16px 100px;
       @include margin_0_auto;
       background-color: #aa0601;
       color: #fff;
@@ -757,7 +755,7 @@ a {
   }
   .position {
     @include display_flex;
-    @include align_items_center;
+    @include align_items_stretch;
     @include iPad {
       @include flex_wrap_wrap;
       @include justify_content_center;
@@ -789,7 +787,6 @@ a {
       }
       .text {
         @include iPad {
-          margin-top: 5px;
           width: 48%;
         }
         @include mobile {
@@ -836,7 +833,7 @@ a {
     }
     .map {
       width: 57%;
-      height: 422px;
+      // height: 422px;
       @include iPad {
         width: 100%;
         object-fit: cover;

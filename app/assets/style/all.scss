@@ -854,13 +854,17 @@ a {
       @include font_size_and_line_height(24px, 1.3);
     }
     @include mobile {
-      @include font_size_and_line_height(14px, 1);
+      @include font_size_and_line_height(12px, 1);
     }
   }
   @include max_width(1150px);
   @include margin_0_auto;
   padding-left: 15px;
   padding-right: 15px;
+  @include mobile {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   .category {
     white-space: nowrap;
     @include display_flex;

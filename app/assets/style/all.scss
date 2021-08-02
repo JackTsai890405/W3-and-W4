@@ -1,219 +1,10 @@
 @import "reset";
+@import "base";
 @import "display";
 @import "rwd";
 @import "text";
 @import "customized";
-
-body {
-  font-family: "Roboto", "思源黑體 TW", sans-serif;
-  @include font_size_and_line_height(20px, 1.5);
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-  &:hover {
-    font-style: italic;
-  }
-}
-
-.header {
-  @include text_align_center;
-  padding: 30px 88px;
-  @include iPad {
-    padding: 30 39px;
-  }
-  @include mobile {
-    padding: 10px 0 0 0;
-  }
-  background-color: #aa0601;
-  color: #fff;
-  @include display_flex;
-  @include mobile {
-    @include flex_direction_column;
-  }
-  @include justify_content_space_between;
-  @include align_items_center;
-  .headerLogo {
-    a {
-      display: block;
-      width: 80px;
-      height: 48.57px;
-      background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/logo.png);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    @include mobile {
-      margin-bottom: 10px;
-    }
-  }
-  .headerNav {
-    @include display_flex;
-    @include flex_wrap_wrap;
-    @include mobile {
-      width: 100%;
-    }
-    .item {
-      margin-right: 64px;
-      &:last-child {
-        margin-right: 0;
-      }
-      @include iPad {
-        margin-right: 40px;
-      }
-      @include mobile {
-        width: 50%;
-        margin-right: 0;
-        border: 1px solid #fff;
-      }
-    }
-  }
-}
-
-.footer {
-  background-color: #aa0601;
-  color: #fff;
-  .container {
-    @include max_width(1150px);
-    @include margin_0_auto;
-    padding: 30px 15px;
-    .copyright {
-      @include display_flex;
-      @include justify_content_space_between;
-      @include mobile {
-        @include flex_direction_column;
-      }
-      p {
-        @include font_size_and_line_height(16px, 1.5);
-        @include mobile {
-          @include font_size_and_line_height(14px, 1.5);
-          margin-bottom: 8px;
-        }
-      }
-      .item {
-        @include display_flex;
-        @include mobile {
-          @include flex_direction_column;
-        }
-        li {
-          @include font_size_and_line_height(14px, 1.5);
-          margin-right: 48px;
-          &:last-child {
-            margin-right: 0;
-          }
-          @include iPad {
-            margin-right: 24px;
-          }
-          @include mobile {
-            margin-right: 0;
-            margin-bottom: 8px;
-            &:last-child {
-              margin-bottom: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-  .info {
-    @include display_flex;
-    @include justify_content_space_between;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 24px;
-    margin-bottom: 32px;
-    @include iPad {
-      padding-bottom: 20px;
-      margin-bottom: 24px;
-    }
-    @include mobile {
-      padding-bottom: 24px;
-      margin-bottom: 16px;
-    }
-  }
-  .map {
-    @include display_flex;
-    margin-bottom: 36px;
-    @include iPad {
-      margin-bottom: 18px;
-    }
-    @include mobile {
-      display: none;
-    }
-    .item {
-      @include font_size_and_line_height(16px, 1.5);
-      margin-right: 48px;
-      &:last-child {
-        margin-right: 0;
-      }
-      @include iPad {
-        margin-right: 40px;
-      }
-    }
-    a {
-      @include font_size_and_line_height(16px, 1.5);
-    }
-  }
-  .contact {
-    li {
-      @include font_size_and_line_height(36px, 1.5);
-      @include iPad {
-        @include font_size_and_line_height(20px, 1.5);
-      }
-      @include mobile {
-        @include font_size_and_line_height(16px, 1.5);
-      }
-      a {
-        margin-left: 22px;
-        @include font_size_and_line_height(36px, 1.5);
-        @include iPad {
-          margin-left: 11px;
-          @include font_size_and_line_height(20px, 1.5);
-        }
-        @include mobile {
-          margin-left: 4px;
-          @include font_size_and_line_height(16px, 1.5);
-        }
-      }
-      img {
-        height: 48px;
-        @include iPad {
-          height: 24px;
-        }
-        @include mobile {
-          height: 20px;
-        }
-      }
-    }
-    .li1 {
-      margin-bottom: 16px;
-      @include iPad {
-        margin-bottom: 12px;
-      }
-      @include mobile {
-        margin-bottom: 4px;
-      }
-    }
-  }
-  .social {
-    @include display_flex;
-    li {
-      margin-right: 32px;
-      &:last-child {
-        margin-right: 0;
-      }
-      img {
-        height: 48px;
-        @include iPad {
-          height: 24px;
-        }
-      }
-      @include iPad {
-        margin-right: 24px;
-      }
-    }
-  }
-}
+@import "layout";
 
 // index.html
 .banner {
@@ -223,13 +14,12 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  object-fit: cover;
   .container {
     height: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    @include max_width(1150px);
-    @include margin_0_auto;
+    // padding-left: 15px;
+    // padding-right: 15px;
+    // @include margin_0_auto;
+    @include max_width(1140px);
     @include display_flex();
     @include flex_direction_column();
     @include justify_content_center();
@@ -263,7 +53,7 @@ a {
   @include text_align_center();
   @include font_size_and_line_height(16px, 1.5);
   .container {
-    @include max_width(1150px);
+    @include max_width(1140px);
     @include margin_0_auto;
     @include text_align_center();
     padding: 60px 15px 80px;
@@ -278,15 +68,15 @@ a {
     .subTitle {
       color: #650300;
       font-weight: bolder;
-      margin-bottom: 48px;
+      margin-bottom: 40px;
       @include font_size_and_line_height(48px, 1.5);
       @include iPad {
         @include font_size_and_line_height(32px, 1.5);
-        margin-bottom: 4px;
+        margin-bottom: 32px;
       }
       @include mobile {
         @include font_size_and_line_height(24px, 1.5);
-        margin-bottom: 28px;
+        margin-bottom: 24px;
       }
     }
     ul {
@@ -312,6 +102,7 @@ a {
         }
         img {
           height: 100px;
+          object-fit: cover;
           margin-bottom: 16px;
           @include iPad {
             margin-bottom: 24px;
@@ -338,7 +129,7 @@ a {
 // 大魔王
 .classicContainer {
   padding: 60px 15px 80px;
-  @include max_width(1150px);
+  @include max_width(1140px);
   @include margin_0_auto;
   @include text_align_center();
   @include iPad {
@@ -389,6 +180,7 @@ a {
     }
     img {
       width: 60%;
+      object-fit: cover;
       margin-right: 30px;
       &:nth-child(2) {
         margin-right: 0;
@@ -407,6 +199,7 @@ a {
       }
       img {
         width: 48px;
+        object-fit: cover;
         margin-right: 8px;
         @include iPad {
           height: 40px;
@@ -442,7 +235,7 @@ a {
   }
   .container {
     padding: 60px 15px 80px;
-    @include max_width(1150px);
+    @include max_width(1140px);
     @include margin_0_auto;
     @include text_align_center();
     @include iPad {
@@ -472,8 +265,7 @@ a {
       @include justify_content_space_between();
       @include flex_wrap_wrap;
       .item {
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: overlay;
+        background-color: #fff;
         width: 48%;
         position: relative;
         @include font_size_and_line_height(72px, 1.5);
@@ -485,8 +277,10 @@ a {
           width: 100%;
         }
         img {
+          object-fit: cover;
           height: 455px;
           width: 100%;
+          opacity: 0.5;
           @include iPad {
             height: 278px;
           }
@@ -494,7 +288,7 @@ a {
             height: 291px;
           }
         }
-        p {
+        h3 {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -516,7 +310,7 @@ a {
   padding-bottom: 80px;
   padding-left: 15px;
   padding-right: 15px;
-  @include max_width(1150px);
+  @include max_width(1140px);
   @include margin_0_auto;
   @include iPad {
     padding-top: 40px;
@@ -546,6 +340,7 @@ a {
     li {
       width: 23%;
       margin-bottom: 16px;
+      box-shadow: 0 2px 6px #dee2e6;
       @include display_flex;
       @include flex_direction_column;
       @include iPad {
@@ -589,13 +384,14 @@ a {
 .contact {
   background-color: #aa06010d;
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
     padding-top: 60px;
     padding-bottom: 80px;
-    @include max_width(1150px);
-    @include margin_0_auto;
+    @include max_width(1140px);
     @include font_size_and_line_height(20px, 1.5);
+    .contact-inner {
+      width: 64%;
+      @include margin_0_auto;
+    }
     .subTitle {
       font-weight: bold;
       @include font_size_and_line_height(48px, 1.5);
@@ -629,7 +425,9 @@ a {
       a {
         display: block;
         @include font_size_and_line_height(16px, 1.5);
-        padding: 16px 134px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        width: 50%;
         @include margin_0_auto;
         background-color: #aa0601;
         color: #fff;
@@ -648,7 +446,7 @@ a {
 
 // faq.html
 .faq {
-  @include max_width(1150px);
+  @include max_width(1140px);
   @include margin_0_auto;
   padding: 96px 15px 160px 15px;
   .title {
@@ -697,7 +495,7 @@ a {
     }
   }
 }
-
+// 門市據點
 .location2 {
   padding: 96px 15px 160px;
   @include iPad {
@@ -708,7 +506,7 @@ a {
     padding-top: 28px;
     padding-bottom: 56px;
   }
-  @include max_width(1150px);
+  @include max_width(1140px);
   @include margin_0_auto;
   .title {
     @include font_size_and_line_height(48px, 1.7);
@@ -820,6 +618,7 @@ a {
             img {
               width: 10%;
               height: 24px;
+              object-fit: cover;
               @include iPad {
                 height: 20px;
               }
@@ -848,7 +647,7 @@ a {
     }
   }
 }
-
+// 太陽眼鏡
 .productSun_head {
   a {
     color: black;
@@ -861,7 +660,7 @@ a {
       @include font_size_and_line_height(12px, 1);
     }
   }
-  @include max_width(1150px);
+  @include max_width(1140px);
   @include margin_0_auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -876,8 +675,7 @@ a {
     li {
       border-left: 1px solid #dcdcdc;
       border-right: 1px solid #dcdcdc;
-      padding-top: 27px;
-      padding-bottom: 26px;
+
       width: 33.33%;
       @include iPad {
         padding-top: 14px;
@@ -891,10 +689,13 @@ a {
         @include display_flex;
         @include justify_content_center;
         @include align_items_center;
+        padding-top: 27px;
+        padding-bottom: 26px;
       }
     }
     .item1 {
       img {
+        object-fit: cover;
         width: 32px;
         height: 32px;
         margin-right: 22px;
@@ -917,6 +718,7 @@ a {
     .item2 {
       border-bottom: 8px solid #aa0601;
       img {
+        object-fit: cover;
         width: 44px;
         height: 44px;
         margin-right: 10px;
@@ -938,6 +740,7 @@ a {
     }
     .item3 {
       img {
+        object-fit: cover;
         width: 20px;
         height: 40px;
         margin-right: 22px;
@@ -994,7 +797,7 @@ a {
 }
 
 .productSun_bottom {
-  @include max_width(1150px);
+  @include max_width(1140px);
   @include margin_0_auto;
   padding-bottom: 160px;
   padding-left: 15px;
@@ -1167,18 +970,12 @@ a {
     }
   }
 }
-// Blog
+// 部落格
 .container {
-  @include max_width(1150px);
+  @include max_width(1140px);
   @include margin_0_auto;
   padding-left: 15px;
   padding-right: 15px;
-  @include iPad {
-    @include max_width(992px);
-  }
-  @include mobile {
-    @include max_width(767px);
-  }
 }
 .blogHeader {
   @include font_size_and_line_height(20px, 1.2);
@@ -1265,9 +1062,13 @@ a {
       @include flex_direction_column;
       @include align_items_center;
     }
+    a {
+      display: none;
+    }
     img {
       display: block;
       width: 48.5%;
+      object-fit: cover;
       margin-right: 3%;
       @include mobile {
         width: 100%;

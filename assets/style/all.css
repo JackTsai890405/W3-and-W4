@@ -86,7 +86,7 @@ a {
           align-items: center; }
   @media (max-width: 992px) {
     .header {
-      padding: 30 39px; } }
+      padding: 30px 39px; } }
   @media (max-width: 767px) {
     .header {
       padding: 10px 0 0 0; } }
@@ -103,7 +103,10 @@ a {
     background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/logo.png);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    white-space: nowrap;
+    text-indent: 101%;
+    overflow: hidden; }
   @media (max-width: 767px) {
     .header .headerLogo {
       margin-bottom: 10px; } }
@@ -128,12 +131,16 @@ a {
           width: 50%;
           margin-right: 0;
           border: 1px solid #fff; } }
+      .header .headerNav .item a {
+        display: block;
+        padding-top: 8px;
+        padding-bottom: 8px; }
 
 .footer {
   background-color: #aa0601;
   color: #fff; }
   .footer .container {
-    max-width: 1150px;
+    max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
     padding: 30px 15px; }
@@ -250,7 +257,9 @@ a {
           font-size: 16px;
           line-height: 1.5; } }
     .footer .contact li img {
-      height: 48px; }
+      height: 48px;
+      -o-object-fit: cover;
+         object-fit: cover; }
       @media (max-width: 992px) {
         .footer .contact li img {
           height: 24px; } }
@@ -274,7 +283,9 @@ a {
       .footer .social li:last-child {
         margin-right: 0; }
       .footer .social li img {
-        height: 48px; }
+        height: 48px;
+        -o-object-fit: cover;
+           object-fit: cover; }
         @media (max-width: 992px) {
           .footer .social li img {
             height: 24px; } }
@@ -288,16 +299,10 @@ a {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  -o-object-fit: cover;
-     object-fit: cover; }
+  background-size: cover; }
   .banner .container {
     height: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 1150px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1140px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -343,7 +348,7 @@ a {
   font-size: 16px;
   line-height: 1.5; }
   .focus .container {
-    max-width: 1150px;
+    max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -359,19 +364,19 @@ a {
     .focus .container .subTitle {
       color: #650300;
       font-weight: bolder;
-      margin-bottom: 48px;
+      margin-bottom: 40px;
       font-size: 48px;
       line-height: 1.5; }
       @media (max-width: 992px) {
         .focus .container .subTitle {
           font-size: 32px;
           line-height: 1.5;
-          margin-bottom: 4px; } }
+          margin-bottom: 32px; } }
       @media (max-width: 767px) {
         .focus .container .subTitle {
           font-size: 24px;
           line-height: 1.5;
-          margin-bottom: 28px; } }
+          margin-bottom: 24px; } }
     .focus .container ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -394,6 +399,8 @@ a {
               margin-bottom: 40px; } }
         .focus .container ul li img {
           height: 100px;
+          -o-object-fit: cover;
+             object-fit: cover;
           margin-bottom: 16px; }
           @media (max-width: 992px) {
             .focus .container ul li img {
@@ -413,7 +420,7 @@ a {
 
 .classicContainer {
   padding: 60px 15px 80px;
-  max-width: 1150px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
@@ -476,6 +483,8 @@ a {
         position: relative; } }
     .classicContainer li img {
       width: 60%;
+      -o-object-fit: cover;
+         object-fit: cover;
       margin-right: 30px; }
       .classicContainer li img:nth-child(2) {
         margin-right: 0; }
@@ -493,6 +502,8 @@ a {
                 transform: translate(-50%, -50%); } }
     .classicContainer li .thirdTitle img {
       width: 48px;
+      -o-object-fit: cover;
+         object-fit: cover;
       margin-right: 8px; }
       @media (max-width: 992px) {
         .classicContainer li .thirdTitle img {
@@ -523,7 +534,7 @@ a {
       height: 719px; } }
   .design .container {
     padding: 60px 15px 80px;
-    max-width: 1150px;
+    max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
     text-align: center; }
@@ -561,8 +572,7 @@ a {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
       .design .container ul .item {
-        background-color: rgba(255, 255, 255, 0.5);
-        background-blend-mode: overlay;
+        background-color: #fff;
         width: 48%;
         position: relative;
         font-size: 72px;
@@ -576,15 +586,18 @@ a {
           .design .container ul .item {
             width: 100%; } }
         .design .container ul .item img {
+          -o-object-fit: cover;
+             object-fit: cover;
           height: 455px;
-          width: 100%; }
+          width: 100%;
+          opacity: 0.5; }
           @media (max-width: 992px) {
             .design .container ul .item img {
               height: 278px; } }
           @media (max-width: 767px) {
             .design .container ul .item img {
               height: 291px; } }
-        .design .container ul .item p {
+        .design .container ul .item h3 {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -601,7 +614,7 @@ a {
   padding-bottom: 80px;
   padding-left: 15px;
   padding-right: 15px;
-  max-width: 1150px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto; }
   @media (max-width: 992px) {
@@ -639,6 +652,8 @@ a {
     .customContainer ul li {
       width: 23%;
       margin-bottom: 16px;
+      -webkit-box-shadow: 0 2px 6px #dee2e6;
+              box-shadow: 0 2px 6px #dee2e6;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -685,15 +700,15 @@ a {
 .contact {
   background-color: #aa06010d; }
   .contact .container {
-    padding-left: 15px;
-    padding-right: 15px;
     padding-top: 60px;
     padding-bottom: 80px;
-    max-width: 1150px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1140px;
     font-size: 20px;
     line-height: 1.5; }
+    .contact .container .contact-inner {
+      width: 64%;
+      margin-left: auto;
+      margin-right: auto; }
     .contact .container .subTitle {
       font-weight: bold;
       font-size: 48px;
@@ -731,7 +746,9 @@ a {
       display: block;
       font-size: 16px;
       line-height: 1.5;
-      padding: 16px 134px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      width: 50%;
       margin-left: auto;
       margin-right: auto;
       background-color: #aa0601;
@@ -747,7 +764,7 @@ a {
           padding: 8px 54.5px; } }
 
 .faq {
-  max-width: 1150px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding: 96px 15px 160px 15px; }
@@ -799,7 +816,7 @@ a {
 
 .location2 {
   padding: 96px 15px 160px;
-  max-width: 1150px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto; }
   @media (max-width: 992px) {
@@ -939,7 +956,9 @@ a {
             margin-bottom: 0; }
           .location2 .position .image_and_text .text ul li img {
             width: 10%;
-            height: 24px; }
+            height: 24px;
+            -o-object-fit: cover;
+               object-fit: cover; }
             @media (max-width: 992px) {
               .location2 .position .image_and_text .text ul li img {
                 height: 20px; } }
@@ -962,7 +981,7 @@ a {
              object-fit: cover; } }
 
 .productSun_head {
-  max-width: 1150px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -995,8 +1014,6 @@ a {
     .productSun_head .category li {
       border-left: 1px solid #dcdcdc;
       border-right: 1px solid #dcdcdc;
-      padding-top: 27px;
-      padding-bottom: 26px;
       width: 33.33%; }
       @media (max-width: 992px) {
         .productSun_head .category li {
@@ -1015,8 +1032,12 @@ a {
                 justify-content: center;
         -webkit-box-align: center;
             -ms-flex-align: center;
-                align-items: center; }
+                align-items: center;
+        padding-top: 27px;
+        padding-bottom: 26px; }
     .productSun_head .category .item1 img {
+      -o-object-fit: cover;
+         object-fit: cover;
       width: 32px;
       height: 32px;
       margin-right: 22px; }
@@ -1033,6 +1054,8 @@ a {
     .productSun_head .category .item2 {
       border-bottom: 8px solid #aa0601; }
       .productSun_head .category .item2 img {
+        -o-object-fit: cover;
+           object-fit: cover;
         width: 44px;
         height: 44px;
         margin-right: 10px; }
@@ -1047,6 +1070,8 @@ a {
           height: 14px;
           margin-right: 2px; } }
     .productSun_head .category .item3 img {
+      -o-object-fit: cover;
+         object-fit: cover;
       width: 20px;
       height: 40px;
       margin-right: 22px; }
@@ -1096,7 +1121,7 @@ a {
         height: 148px; } }
 
 .productSun_bottom {
-  max-width: 1150px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 160px;
@@ -1244,17 +1269,11 @@ a {
             background-color: #f2f2f2; } }
 
 .container {
-  max-width: 1150px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  @media (max-width: 992px) {
-    .container {
-      max-width: 992px; } }
-  @media (max-width: 767px) {
-    .container {
-      max-width: 767px; } }
 
 .blogHeader {
   font-size: 20px;
@@ -1342,9 +1361,13 @@ a {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; } }
+  .blog .blogList a {
+    display: none; }
   .blog .blogList img {
     display: block;
     width: 48.5%;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-right: 3%; }
     @media (max-width: 767px) {
       .blog .blogList img {

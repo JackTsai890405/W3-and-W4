@@ -1362,18 +1362,19 @@ a {
           -ms-flex-align: center;
               align-items: center; } }
   .blog .blogList a {
-    display: none; }
-  .blog .blogList img {
     display: block;
     width: 48.5%;
-    -o-object-fit: cover;
-       object-fit: cover;
     margin-right: 3%; }
     @media (max-width: 767px) {
-      .blog .blogList img {
+      .blog .blogList a {
         width: 100%;
         margin-right: 0%;
         margin-bottom: 8px; } }
+  .blog .blogList img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
   .blog .blogList div {
     width: 48.5%; }
     @media (max-width: 767px) {
@@ -1447,12 +1448,9 @@ a {
       font-size: 36px;
       line-height: 1.5;
       color: #650300;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: end;
-          -ms-flex-pack: end;
-              justify-content: flex-end; }
+      margin-right: 0%;
+      width: 100%;
+      text-align: end; }
       @media (max-width: 992px) {
         .blog .blogList div .more {
           display: none; } }
